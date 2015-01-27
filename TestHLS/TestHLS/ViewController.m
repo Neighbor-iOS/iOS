@@ -21,19 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-        NSLog(@"asfasdf");
-        NSLog(@"asfasdf");
     isFullScreen = NO;
     seekTime = 0;
-    seekTime = 0;
-    seekTime = 0;
-    seekTime = 0;
-    seekTime = 0;
-
-        NSLog(@"asfasdf");
-    NSLog(@"asfasdf");
     
-        NSLog(@"asfasdf");
+    
     //기본 화면 사이즈 가져오기 / orientation이 바껴도 변하지 않는다.
     windowW = [[UIScreen mainScreen] bounds].size.width;
     windowH = [[UIScreen mainScreen] bounds].size.height;
