@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB57D67A1A777A4C00404B93 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB57D6791A777A4C00404B93 /* DetailViewController.m */; };
 		ABB58D181A6DFAC90093FD95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB58D171A6DFAC90093FD95 /* main.m */; };
 		ABB58D1B1A6DFAC90093FD95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB58D1A1A6DFAC90093FD95 /* AppDelegate.m */; };
 		ABB58D1E1A6DFAC90093FD95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB58D1D1A6DFAC90093FD95 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB57D6781A777A4C00404B93 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		AB57D6791A777A4C00404B93 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		ABB58D121A6DFAC90093FD95 /* CollectionTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB58D161A6DFAC90093FD95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB58D171A6DFAC90093FD95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				ABB58D3C1A6E41AB0093FD95 /* CollectionViewController.m */,
 				ABB58D571A6E87030093FD95 /* CollectionViewCell.h */,
 				ABB58D581A6E87030093FD95 /* CollectionViewCell.m */,
+				AB57D6781A777A4C00404B93 /* DetailViewController.h */,
+				AB57D6791A777A4C00404B93 /* DetailViewController.m */,
 				ABB58D1F1A6DFAC90093FD95 /* Main.storyboard */,
 				ABB58D221A6DFAC90093FD95 /* Images.xcassets */,
 				ABB58D241A6DFAC90093FD95 /* LaunchScreen.xib */,
@@ -290,6 +295,7 @@
 				ABB58D1E1A6DFAC90093FD95 /* ViewController.m in Sources */,
 				ABB58D1B1A6DFAC90093FD95 /* AppDelegate.m in Sources */,
 				ABB58D181A6DFAC90093FD95 /* main.m in Sources */,
+				AB57D67A1A777A4C00404B93 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
