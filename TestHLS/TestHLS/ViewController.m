@@ -23,6 +23,10 @@
     
     isFullScreen = NO;
     seekTime = 0;
+    seekTime = 0;
+    seekTime = 0;
+    seekTime = 0;
+    seekTime = 0;
     
     //기본 화면 사이즈 가져오기 / orientation이 바껴도 변하지 않는다.
     windowW = [[UIScreen mainScreen] bounds].size.width;
