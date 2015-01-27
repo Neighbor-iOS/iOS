@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9T3-cK-qCx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-aR-EW0">
+                                <rect key="frame" x="230" y="410" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="6ol-zv-0BY"/>
+                                </constraints>
+                                <state key="normal" title="Unuse AutoLayout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="normalLayout:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fq6-Gc-suk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JV-4G-K7f">
+                                <rect key="frame" x="235" y="186" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="6Mg-zL-rAb"/>
+                                </constraints>
+                                <state key="normal" title="Use AutoLayout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="autoLayout:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ld3-uQ-x4A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MFX-aR-EW0" secondAttribute="bottom" constant="160" id="5Am-a0-QVf"/>
+                            <constraint firstItem="5JV-4G-K7f" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Qmb-If-irh"/>
+                            <constraint firstItem="5JV-4G-K7f" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="122" id="YXZ-lR-jb5"/>
+                            <constraint firstItem="5JV-4G-K7f" firstAttribute="centerX" secondItem="MFX-aR-EW0" secondAttribute="centerX" id="sNT-5s-04C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7oR-kS-8X8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="1219"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GGi-13-ZuO">
+            <objects>
+                <navigationController id="9T3-cK-qCx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bSR-hh-0He">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="itm-1a-y9k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFy-L8-ikn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="509"/>
+        </scene>
+    </scenes>
+</document>

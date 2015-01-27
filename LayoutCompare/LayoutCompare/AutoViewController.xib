@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw3-2M-6JH">
+                    <rect key="frame" x="50" y="50" width="275" height="567"/>
+                    <mutableString key="text">Organization of This Document
+
+Read the following chapters to learn how to use Auto Layout:
+•Auto Layout Concepts to learn about the main concepts you need to understand when using Auto Layout
+
+•Working with Constraints in Interface Builder to learn about using Interface Builder to create and edit layout constraints
+
+•Working with Auto Layout Programmatically to learn about working with Auto Layout in code
+
+•Resolving Auto Layout Issues to learn about identifying and debugging issues with your layout
+
+•Auto Layout by Example to see examples of common Auto Layout use cases
+
+•Implementing a Custom View to Work with Auto Layout to learn how to implement a custom view that interoperates with Auto Layout
+
+•Adopting Auto Layout to learn how to adopt Auto Layout in an existing project that doesn’t use Auto Layout
+
+•Visual Format Language to learn about the language used to create constraints in code
+</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qw3-2M-6JH" secondAttribute="bottom" constant="50" id="2cz-qt-4Dw"/>
+                <constraint firstItem="qw3-2M-6JH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="Bbv-vs-JOz"/>
+                <constraint firstItem="qw3-2M-6JH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="JEz-TQ-JKM"/>
+                <constraint firstAttribute="trailing" secondItem="qw3-2M-6JH" secondAttribute="trailing" constant="50" id="jrm-iA-RUw"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>
