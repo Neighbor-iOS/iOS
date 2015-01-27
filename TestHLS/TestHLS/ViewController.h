@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WDActivityIndicator.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    @private
+    NSURL *streamURL;
+    BOOL isFullScreen;
+    int loadingImgSize;
+    float windowW;
+    float windowH;
+    int seekTime;
+}
+@property (weak, nonatomic) IBOutlet WDActivityIndicator *activityIndicator;
 
 @property (weak, nonatomic) IBOutlet UIView *customView;
 
@@ -18,5 +28,7 @@
 - (IBAction)goSeek:(id)sender;
 - (IBAction)stopPlay:(id)sender;
 - (IBAction)fullScreen:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *controllerView;
+- (IBAction)movePlay:(id)sender;
 @end
 

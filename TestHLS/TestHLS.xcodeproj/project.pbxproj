@@ -14,6 +14,8 @@
 		E84C8D941A64E9A100D08A26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84C8D931A64E9A100D08A26 /* Images.xcassets */; };
 		E84C8D971A64E9A100D08A26 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84C8D951A64E9A100D08A26 /* LaunchScreen.xib */; };
 		E84C8DA31A64E9A100D08A26 /* TestHLSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E84C8DA21A64E9A100D08A26 /* TestHLSTests.m */; };
+		F12D0FCE1A6E01DE0072A5B1 /* WDActivityIndicator.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F12D0FCB1A6E01DE0072A5B1 /* WDActivityIndicator.bundle */; };
+		F12D0FCF1A6E01DE0072A5B1 /* WDActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F12D0FCD1A6E01DE0072A5B1 /* WDActivityIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		E84C8D9C1A64E9A100D08A26 /* TestHLSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestHLSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84C8DA11A64E9A100D08A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E84C8DA21A64E9A100D08A26 /* TestHLSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHLSTests.m; sourceTree = "<group>"; };
+		F12D0FCB1A6E01DE0072A5B1 /* WDActivityIndicator.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WDActivityIndicator.bundle; sourceTree = "<group>"; };
+		F12D0FCC1A6E01DE0072A5B1 /* WDActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDActivityIndicator.h; sourceTree = "<group>"; };
+		F12D0FCD1A6E01DE0072A5B1 /* WDActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDActivityIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		E84C8D851A64E9A100D08A26 /* TestHLS */ = {
 			isa = PBXGroup;
 			children = (
+				F12D0FCA1A6E01DE0072A5B1 /* WDActivityIndicator */,
 				E84C8D8A1A64E9A100D08A26 /* AppDelegate.h */,
 				E84C8D8B1A64E9A100D08A26 /* AppDelegate.m */,
 				E84C8D8D1A64E9A100D08A26 /* ViewController.h */,
@@ -117,6 +123,16 @@
 				E84C8DA11A64E9A100D08A26 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F12D0FCA1A6E01DE0072A5B1 /* WDActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				F12D0FCB1A6E01DE0072A5B1 /* WDActivityIndicator.bundle */,
+				F12D0FCC1A6E01DE0072A5B1 /* WDActivityIndicator.h */,
+				F12D0FCD1A6E01DE0072A5B1 /* WDActivityIndicator.m */,
+			);
+			path = WDActivityIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +184,7 @@
 				TargetAttributes = {
 					E84C8D821A64E9A100D08A26 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = K9V8XP7C65;
 					};
 					E84C8D9B1A64E9A100D08A26 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -201,6 +218,7 @@
 			files = (
 				E84C8D921A64E9A100D08A26 /* Main.storyboard in Resources */,
 				E84C8D971A64E9A100D08A26 /* LaunchScreen.xib in Resources */,
+				F12D0FCE1A6E01DE0072A5B1 /* WDActivityIndicator.bundle in Resources */,
 				E84C8D941A64E9A100D08A26 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +240,7 @@
 				E84C8D8F1A64E9A100D08A26 /* ViewController.m in Sources */,
 				E84C8D8C1A64E9A100D08A26 /* AppDelegate.m in Sources */,
 				E84C8D891A64E9A100D08A26 /* main.m in Sources */,
+				F12D0FCF1A6E01DE0072A5B1 /* WDActivityIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +299,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: daebok lee (L3MFB9FY4J)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -322,7 +341,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: daebok lee (L3MFB9FY4J)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -345,9 +364,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TestHLS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -355,9 +378,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TestHLS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -414,6 +441,7 @@
 				E84C8DA81A64E9A100D08A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E84C8DA91A64E9A100D08A26 /* Build configuration list for PBXNativeTarget "TestHLSTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +450,7 @@
 				E84C8DAB1A64E9A100D08A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
