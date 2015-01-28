@@ -2,7 +2,7 @@
 //  DetailViewController.m
 //  CollectionTest
 //
-//  Created by 강민우 on 2015. 1. 27..
+//  Created by 강민우 on 2015. 1. 28..
 //  Copyright (c) 2015년 강민우. All rights reserved.
 //
 
@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
+    
+    _detailImage.image = [UIImage imageNamed:_receivedImage];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewController.h"
+#import "DetailViewController.h"
 
 @interface CollectionViewController ()
 
@@ -22,30 +23,39 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnVidkdnfewWillAppear = NO;
     
+    // Do any additional setup after loading the view.
+    
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    
     bool activateState = [[NSUserDefaults standardUserDefaults] boolForKey:@"ActivateState"];
     _storedImages = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"CellImages"]];
     
     if (activateState && [_storedImages count] == 0) {
-        _cellImages = [NSMutableArray arrayWithObjects:@"girl00.jpeg", @"girl01.jpeg", @"girl02.jpeg",
-                       @"girl03.jpeg", @"girl04.jpeg", @"girl05.jpeg", @"girl06.jpeg", @"girl07.jpeg",
-                       @"girl08.jpeg", @"girl09.jpeg", @"girl10.jpeg", @"girl11.jpeg", nil];
+        _cellImages = [[NSMutableArray alloc] initWithArray:[self getFileNameByExtension:@"jpg"]];
     } else {
         _cellImages = _storedImages;
     }
     
-//    _cellImages = [NSMutableArray arrayWithObjects:@"girl00.jpeg", @"girl01.jpeg", @"girl02.jpeg",
-//                   @"girl03.jpeg", @"girl04.jpeg", @"girl05.jpeg", @"girl06.jpeg", @"girl07.jpeg",
-//                   @"girl08.jpeg", @"girl09.jpeg", @"girl10.jpeg", @"girl11.jpeg", nil];
-    
     // Register cell classes
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSArray *)getFileNameByExtension:(NSString *)extension {
+    NSString *path = [[NSBundle mainBundle] resourcePath];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = [[NSError alloc] init];
+    NSArray *directoryAndFileNames = [fileManager contentsOfDirectoryAtPath:path error:&error];
+    NSString *format = [NSString stringWithFormat:@"self ENDSWITH '.%@'", extension];
+    NSPredicate *filter = [NSPredicate predicateWithFormat:format];
+    
+    NSArray *filesNameArray = [directoryAndFileNames filteredArrayUsingPredicate:filter];
+    
+    return filesNameArray;
 }
 
 /*
@@ -86,11 +96,16 @@ static NSString * const reuseIdentifier = @"Cell";
 NSArray *deletions;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    deletions = @[indexPath];
+    /*deletions = @[indexPath];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete Item" message:@"Do you want to delete the item?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
     [alert setTag:1004];
-    [alert show];
+    [alert show];*/
+    
+    NSString *sendImage = [_cellImages objectAtIndex:indexPath.item];
+    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    detailViewController.receivedImage = sendImage;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
@@ -156,7 +171,7 @@ NSArray *deletions;
 }
 
 - (IBAction)onAdd:(id)sender {
-    int index = (int)[self randIndex];
+    /*int index = (int)[self randIndex];
     NSString *imageName = [[NSString alloc] initWithFormat:@"girl%02i.jpeg", index];
     //UIImage *girlImg = [UIImage imageNamed:imageName];
     [_cellImages addObject:imageName];
@@ -164,7 +179,7 @@ NSArray *deletions;
     [[NSUserDefaults standardUserDefaults] setObject:_cellImages forKey:@"CellImages"];    
     
     NSIndexPath* indexPath = [NSIndexPath indexPathForItem:[_cellImages count] - 1 inSection:0];
-    [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
+    [self.collectionView insertItemsAtIndexPaths:@[indexPath]];*/
 }
 
 @end
