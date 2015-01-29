@@ -28,7 +28,11 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
     bool activateState = [[NSUserDefaults standardUserDefaults] boolForKey:@"ActivateState"];
-    _storedImages = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"CellImages"]];
+    //_storedImages = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"CellImages"]];
+    
+    NSDictionary *imageDictionary = [self indexKeyedDictionaryFromArray:[self getFileNameByExtension:@"jpg"]];
+    
+    _storedImages = [self makeImageArrayFromDictionary:imageDictionary];
     
     if (activateState && [_storedImages count] == 0) {
         _cellImages = [[NSMutableArray alloc] initWithArray:[self getFileNameByExtension:@"jpg"]];
@@ -56,6 +60,31 @@ static NSString * const reuseIdentifier = @"Cell";
     NSArray *filesNameArray = [directoryAndFileNames filteredArrayUsingPredicate:filter];
     
     return filesNameArray;
+}
+
+- (NSDictionary *)indexKeyedDictionaryFromArray:(NSArray *)array {
+    id objectinstance;
+    NSUInteger indexKey = 0;
+    NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
+    
+    for (objectinstance in array) {
+        [mutableDictionary setObject:objectinstance forKey:[NSNumber numberWithUnsignedInt:indexKey++]];
+    }
+    
+    return (NSDictionary *)mutableDictionary;
+}
+
+- (NSMutableArray *)makeImageArrayFromDictionary:(NSDictionary *)imageDictionary {
+    NSString *imageName;
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    NSInteger indexKey = 0;
+    
+    for (imageName in imageDictionary) {
+        imageName = [imageDictionary objectForKey:[NSNumber numberWithUnsignedInt:indexKey++]];
+        [result addObject:imageName];
+    }
+    
+    return result;
 }
 
 /*
