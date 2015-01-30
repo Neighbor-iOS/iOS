@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTe-Gk-EhZ">
+                                <rect key="frame" x="16" y="481" width="568" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="iBQ-h3-wyG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take Photo" backgroundImage="button_image.png"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJo-8m-dCq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FQn-wb-jvJ">
+                                <rect key="frame" x="16" y="535" width="568" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xQe-iS-6qY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Select Photo" backgroundImage="button_image.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Der-gT-Ylc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r5O-Le-yBm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="463"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FQn-wb-jvJ" firstAttribute="top" secondItem="uTe-Gk-EhZ" secondAttribute="bottom" constant="9" id="1Mr-Dq-jmO"/>
+                            <constraint firstItem="r5O-Le-yBm" firstAttribute="centerX" secondItem="uTe-Gk-EhZ" secondAttribute="centerX" id="3hr-Me-3d7"/>
+                            <constraint firstAttribute="trailing" secondItem="r5O-Le-yBm" secondAttribute="trailing" id="GMh-2v-5OH"/>
+                            <constraint firstItem="uTe-Gk-EhZ" firstAttribute="top" secondItem="r5O-Le-yBm" secondAttribute="bottom" constant="18" id="HY6-Uq-1Gd"/>
+                            <constraint firstAttribute="bottom" secondItem="FQn-wb-jvJ" secondAttribute="bottom" constant="20" symbolic="YES" id="J1I-t8-XJ2"/>
+                            <constraint firstItem="r5O-Le-yBm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JuM-WA-k2q"/>
+                            <constraint firstItem="FQn-wb-jvJ" firstAttribute="leading" secondItem="uTe-Gk-EhZ" secondAttribute="leading" id="Q66-34-mh2"/>
+                            <constraint firstItem="r5O-Le-yBm" firstAttribute="centerX" secondItem="FQn-wb-jvJ" secondAttribute="centerX" id="cPF-vv-dKl"/>
+                            <constraint firstItem="FQn-wb-jvJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jgw-iG-Qa3"/>
+                            <constraint firstItem="r5O-Le-yBm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uXL-XV-fHH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoView" destination="r5O-Le-yBm" id="OQc-TB-5pG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_image.png" width="658" height="88"/>
+    </resources>
+</document>
