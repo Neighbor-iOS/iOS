@@ -64,7 +64,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSDictionary *)indexKeyedDictionaryFromArray:(NSArray *)array {
     id objectinstance;
-    NSUInteger indexKey = 0;
+    int indexKey = 0;
     NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
     
     for (objectinstance in array) {
@@ -77,7 +77,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSMutableArray *)makeImageArrayFromDictionary:(NSDictionary *)imageDictionary {
     NSString *imageName;
     NSMutableArray *result = [[NSMutableArray alloc] init];
-    NSInteger indexKey = 0;
+    int indexKey = 0;
     
     for (imageName in imageDictionary) {
         imageName = [imageDictionary objectForKey:[NSNumber numberWithUnsignedInt:indexKey++]];
