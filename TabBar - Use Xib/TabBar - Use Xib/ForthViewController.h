@@ -10,6 +10,6 @@
 
 @interface ForthViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

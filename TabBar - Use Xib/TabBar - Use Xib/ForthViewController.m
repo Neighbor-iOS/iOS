@@ -18,7 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     UIImage *image = [UIImage imageNamed:@"w020.jpg"];
-    _scrollView.contentSize = CGSizeMake(image.size.width, image.size.height);
+    [_imageView setFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+    NSLog(@"_imageView.width : %f", _imageView.frame.size.width);
+    NSLog(@"_imageView.width : %f", _imageView.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning {
