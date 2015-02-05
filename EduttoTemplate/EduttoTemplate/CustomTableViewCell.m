@@ -1,14 +1,16 @@
 //
-//  CenterTableViewCell.m
+//  CustomTableViewCell.m
 //  EduttoTemplate
 //
-//  Created by 강민우 on 2015. 2. 3..
+//  Created by 강민우 on 2015. 2. 4..
 //  Copyright (c) 2015년 강민우. All rights reserved.
 //
 
-#import "CenterTableViewCell.h"
+#import "CustomTableViewCell.h"
 
-@implementation CenterTableViewCell
+@implementation CustomTableViewCell
+
+@synthesize cellForImage, cellForLabel, cellForSubLabel;
 
 - (void)awakeFromNib {
     // Initialization code

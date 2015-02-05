@@ -7,20 +7,21 @@
 //
 
 #import "ViewController.h"
-#import "LeftTableViewCell.h"
-#import "CenterTableViewCell.h"
-#import "RightTableViewCell.h"
+#import "CustomTableViewCell.h"
 
 @interface ViewController ()
 
+@property NSArray *sectionList;
 @property NSArray *contentList;
 @property NSArray *courseList;
 @property NSArray *communityList;
+@property NSArray *imageList;
 
 @end
 
 @implementation ViewController
 
+@synthesize scrollView;
 @synthesize leftTableView;
 @synthesize centerTableView;
 @synthesize rightTableView;
@@ -28,10 +29,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _contentList = [NSArray arrayWithObjects:@"Content no.1", @"Content no.2", @"Content no.3", nil];
-    _courseList = [NSArray arrayWithObjects:@"Course no.1", @"Course no.2", @"Course no.3", nil];
-    _communityList = [NSArray arrayWithObjects:@"Community no.1", @"Community no.2", @"Community no.3", nil];
-    
+    _sectionList = @[@"Content", @"Course", @"Community"];
+    _contentList = @[@"Content no.1", @"Content no.2", @"Content no.3"];
+    _courseList = @[@"Course no.1", @"Course no.2", @"Course no.3"];
+    _communityList = @[@"Community no.1", @"Community no.2", @"Community no.3"];
+    _imageList = @[@"w040.jpg", @"w047.jpg", @"w048.jpg"];
+}
+
+- (void)viewDidLayoutSubviews {
+    CGFloat contentSize = 200 * 3 + 8 * 2;
+    [scrollView setContentSize:CGSizeMake(contentSize, 300)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,30 +49,85 @@
 #pragma mark TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableView == self.leftTableView) {
-        return 3;
-    } else if (tableView == self.centerTableView) {
-        return 3;
-    } else {
-        return 3;
+    switch (tableView.tag) {
+        case 0:
+            return _contentList.count;
+            
+        case 1:
+            return _courseList.count;
+            
+        case 2:
+            return _communityList.count;
+            
+        default:
+            return 0;
     }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *sectionTitle;
+    switch (tableView.tag) {
+        case 0:
+            sectionTitle = [_sectionList objectAtIndex:0];
+            break;
+            
+        case 1:
+            sectionTitle = [_sectionList objectAtIndex:1];
+            break;
+            
+        case 2:
+            sectionTitle = [_sectionList objectAtIndex:2];
+            break;
+        default:
+            sectionTitle = @"";
+            break;
+    }
+    
+    return sectionTitle;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 44.0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 75.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        [tableView registerNib:[UINib nibWithNibName:@"CustomTableViewCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     }
     
-    if (tableView == self.leftTableView) {        
-        cell.textLabel.text = [_contentList objectAtIndex:indexPath.row];
-    } else if (tableView == self.centerTableView) {
-        cell.textLabel.text = [_courseList objectAtIndex:indexPath.row];
-    } else {
-        cell.textLabel.text = [_communityList objectAtIndex:indexPath.row];
+    switch (tableView.tag) {
+        case 0:
+            cell.cellForImage.image = [UIImage imageNamed:[_imageList objectAtIndex:indexPath.row]];
+            cell.cellForLabel.text = [_contentList objectAtIndex:indexPath.row];
+            cell.cellForSubLabel.text = [_contentList objectAtIndex:indexPath.row];
+            break;
+            
+        case 1:
+            cell.cellForImage.image = [UIImage imageNamed:[_imageList objectAtIndex:indexPath.row]];
+            cell.cellForLabel.text = [_courseList objectAtIndex:indexPath.row];
+            cell.cellForSubLabel.text = [_courseList objectAtIndex:indexPath.row];
+            break;
+            
+        case 2:
+            cell.cellForImage.image = [UIImage imageNamed:[_imageList objectAtIndex:indexPath.row]];
+            cell.cellForLabel.text = [_communityList objectAtIndex:indexPath.row];
+            cell.cellForSubLabel.text = [_communityList objectAtIndex:indexPath.row];
+            break;
+            
+        default:
+            cell.cellForImage.image = nil;
+            cell.cellForLabel.text = @"";
+            cell.cellForSubLabel.text = @"";
+            break;
     }
     
     return cell;

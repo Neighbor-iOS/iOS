@@ -14,13 +14,12 @@
 		AB6E3F721A80624400E6204E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3F711A80624400E6204E /* Images.xcassets */; };
 		AB6E3F751A80624400E6204E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3F731A80624400E6204E /* LaunchScreen.xib */; };
 		AB6E3F811A80624400E6204E /* EduttoTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6E3F801A80624400E6204E /* EduttoTemplateTests.m */; };
-		AB6E3F8B1A80672C00E6204E /* edutto.png in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3F8A1A80672C00E6204E /* edutto.png */; };
-		AB6E3F8F1A8067E200E6204E /* edutto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3F8D1A8067E200E6204E /* edutto@2x.png */; };
-		AB6E3F901A8067E200E6204E /* edutto@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3F8E1A8067E200E6204E /* edutto@3x.png */; };
 		AB6E3F921A806C8800E6204E /* w014.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3F911A806C8800E6204E /* w014.jpg */; };
-		AB6E3F981A8094CD00E6204E /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6E3F971A8094CD00E6204E /* LeftTableViewCell.m */; };
-		AB6E3F9B1A80954E00E6204E /* CenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6E3F9A1A80954E00E6204E /* CenterTableViewCell.m */; };
-		AB6E3F9E1A80955900E6204E /* RightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6E3F9D1A80955900E6204E /* RightTableViewCell.m */; };
+		AB6E3FB61A82178900E6204E /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6E3FB41A82178900E6204E /* CustomTableViewCell.m */; };
+		AB6E3FB71A82178900E6204E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3FB51A82178900E6204E /* CustomTableViewCell.xib */; };
+		AB6E3FBB1A82180800E6204E /* w040.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3FB81A82180800E6204E /* w040.jpg */; };
+		AB6E3FBC1A82180800E6204E /* w047.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3FB91A82180800E6204E /* w047.jpg */; };
+		AB6E3FBD1A82180800E6204E /* w048.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB6E3FBA1A82180800E6204E /* w048.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,16 +46,13 @@
 		AB6E3F7A1A80624400E6204E /* EduttoTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EduttoTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6E3F7F1A80624400E6204E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB6E3F801A80624400E6204E /* EduttoTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EduttoTemplateTests.m; sourceTree = "<group>"; };
-		AB6E3F8A1A80672C00E6204E /* edutto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edutto.png; path = EduttoTemplate/Resources/edutto.png; sourceTree = "<group>"; };
-		AB6E3F8D1A8067E200E6204E /* edutto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "edutto@2x.png"; path = "EduttoTemplate/Resources/edutto@2x.png"; sourceTree = "<group>"; };
-		AB6E3F8E1A8067E200E6204E /* edutto@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "edutto@3x.png"; path = "EduttoTemplate/Resources/edutto@3x.png"; sourceTree = "<group>"; };
 		AB6E3F911A806C8800E6204E /* w014.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = w014.jpg; path = EduttoTemplate/Resources/w014.jpg; sourceTree = "<group>"; };
-		AB6E3F961A8094CD00E6204E /* LeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
-		AB6E3F971A8094CD00E6204E /* LeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
-		AB6E3F991A80954E00E6204E /* CenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTableViewCell.h; sourceTree = "<group>"; };
-		AB6E3F9A1A80954E00E6204E /* CenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTableViewCell.m; sourceTree = "<group>"; };
-		AB6E3F9C1A80955900E6204E /* RightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightTableViewCell.h; sourceTree = "<group>"; };
-		AB6E3F9D1A80955900E6204E /* RightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTableViewCell.m; sourceTree = "<group>"; };
+		AB6E3FB31A82178900E6204E /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		AB6E3FB41A82178900E6204E /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		AB6E3FB51A82178900E6204E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		AB6E3FB81A82180800E6204E /* w040.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = w040.jpg; path = EduttoTemplate/Resources/w040.jpg; sourceTree = "<group>"; };
+		AB6E3FB91A82180800E6204E /* w047.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = w047.jpg; path = EduttoTemplate/Resources/w047.jpg; sourceTree = "<group>"; };
+		AB6E3FBA1A82180800E6204E /* w048.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = w048.jpg; path = EduttoTemplate/Resources/w048.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +99,9 @@
 				AB6E3F691A80624400E6204E /* AppDelegate.m */,
 				AB6E3F6B1A80624400E6204E /* ViewController.h */,
 				AB6E3F6C1A80624400E6204E /* ViewController.m */,
-				AB6E3F961A8094CD00E6204E /* LeftTableViewCell.h */,
-				AB6E3F971A8094CD00E6204E /* LeftTableViewCell.m */,
-				AB6E3F991A80954E00E6204E /* CenterTableViewCell.h */,
-				AB6E3F9A1A80954E00E6204E /* CenterTableViewCell.m */,
-				AB6E3F9C1A80955900E6204E /* RightTableViewCell.h */,
-				AB6E3F9D1A80955900E6204E /* RightTableViewCell.m */,
+				AB6E3FB31A82178900E6204E /* CustomTableViewCell.h */,
+				AB6E3FB41A82178900E6204E /* CustomTableViewCell.m */,
+				AB6E3FB51A82178900E6204E /* CustomTableViewCell.xib */,
 				AB6E3F6E1A80624400E6204E /* Main.storyboard */,
 				AB6E3F711A80624400E6204E /* Images.xcassets */,
 				AB6E3F731A80624400E6204E /* LaunchScreen.xib */,
@@ -146,10 +139,10 @@
 		AB6E3F8C1A80673500E6204E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB6E3FB81A82180800E6204E /* w040.jpg */,
+				AB6E3FB91A82180800E6204E /* w047.jpg */,
+				AB6E3FBA1A82180800E6204E /* w048.jpg */,
 				AB6E3F911A806C8800E6204E /* w014.jpg */,
-				AB6E3F8D1A8067E200E6204E /* edutto@2x.png */,
-				AB6E3F8E1A8067E200E6204E /* edutto@3x.png */,
-				AB6E3F8A1A80672C00E6204E /* edutto.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -234,12 +227,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6E3F901A8067E200E6204E /* edutto@3x.png in Resources */,
-				AB6E3F8B1A80672C00E6204E /* edutto.png in Resources */,
 				AB6E3F921A806C8800E6204E /* w014.jpg in Resources */,
 				AB6E3F701A80624400E6204E /* Main.storyboard in Resources */,
-				AB6E3F8F1A8067E200E6204E /* edutto@2x.png in Resources */,
+				AB6E3FBD1A82180800E6204E /* w048.jpg in Resources */,
 				AB6E3F751A80624400E6204E /* LaunchScreen.xib in Resources */,
+				AB6E3FB71A82178900E6204E /* CustomTableViewCell.xib in Resources */,
+				AB6E3FBC1A82180800E6204E /* w047.jpg in Resources */,
+				AB6E3FBB1A82180800E6204E /* w040.jpg in Resources */,
 				AB6E3F721A80624400E6204E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,11 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6E3F9E1A80955900E6204E /* RightTableViewCell.m in Sources */,
-				AB6E3F981A8094CD00E6204E /* LeftTableViewCell.m in Sources */,
 				AB6E3F6D1A80624400E6204E /* ViewController.m in Sources */,
 				AB6E3F6A1A80624400E6204E /* AppDelegate.m in Sources */,
-				AB6E3F9B1A80954E00E6204E /* CenterTableViewCell.m in Sources */,
+				AB6E3FB61A82178900E6204E /* CustomTableViewCell.m in Sources */,
 				AB6E3F671A80624400E6204E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +452,7 @@
 				AB6E3F861A80624400E6204E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB6E3F871A80624400E6204E /* Build configuration list for PBXNativeTarget "EduttoTemplateTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +461,7 @@
 				AB6E3F891A80624400E6204E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

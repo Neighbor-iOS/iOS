@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITableView *leftTableView;
 @property (strong, nonatomic) IBOutlet UITableView *centerTableView;
 @property (strong, nonatomic) IBOutlet UITableView *rightTableView;
